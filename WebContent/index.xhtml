@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Guess the number</title>
+<style type="text/css">
+<!--
+.imagen {
+	float: left;
+}
+-->
+</style>
+</head>
+<body>
+  <h:form>
+	<div class="imagen">
+		<h:graphicImage url="/img/monte.jpg" width="240" height="480" />
+	</div>
+
+	
+	<h1><h:outputLabel value="Hei, tente adivinhar o número secreto!" /></h1>
+	<h3>Você pode escolher um número de 1 a 10</h3>
+	<h:inputText value="#{guessMB.numeroTentativa}" size="80"  />
+	<br/>
+	<h:commandButton  value="Validar" action="#{guessMB.validaNumero()}" />
+	<h:outputLabel value="#{guessMB.numeroSecreto}" />
+	
+	<h2>  <h:outputLabel value="#{guessMB.mensagem}" /> </h2>
+</h:form>
+
+
+</body>
+</html>
